@@ -23,8 +23,8 @@ Para fazer o script rodar sozinho de tempos em tempos (ex: a cada 10 minutos):
    - **Escolher qual função executar**: `processTalulaEmails`
    - **Escolher qual implantação deve ser executada**: `Head`
    - **Selecionar a fonte do evento**: `Baseado no tempo` (Time-driven)
-   - **Selecionar o tipo de gatilho com base no tempo**: `Temporizador de minutos` (Minutes timer)
-   - **Selecione o intervalo de minutos**: `A cada 10 minutos` (ou 5 minutos)
+   - **Selecionar o tipo de gatilho com base no tempo**: `Temporizador de minutos` (timer)
+   - **Selecione o intervalo de minutos**: `A cada 1 hora`
 4. Clique em **Salvar** no canto inferior direito.
 
 > [!NOTE]
@@ -36,5 +36,5 @@ Para fazer o script rodar sozinho de tempos em tempos (ex: a cada 10 minutos):
 ## Detalhes da Execução
 
 - **Prevenção de Duplicidade**: O script cria automaticamente um marcador (label) chamado `Talula-Adicionado` no seu Gmail. Cada vez que ele processa um e-mail de agendamento e o insere na sua agenda, ele aplica essa tag à conversa. Dessa forma, nas próximas execuções ele ignora os e-mails que já foram salvos.
-- **Detecção Inteligente**: O script busca e-mails específicos contendo o padrão de agendamento da Talula Cable Park e trata o erro de digitação do e-mail de confirmação (`à0 14:45`).
+- **Detecção Inteligente**: O script busca e-mails específicos contendo o padrão de agendamento da Talula Cable Park e trata o erro de digitação do e-mail de confirmação.
 - **Autonomia Total**: Por rodar diretamente nos servidores da Google Cloud, ele funciona 24 horas por dia, 7 dias por semana, mesmo que seu computador, celular ou navegador Chrome estejam desligados.
